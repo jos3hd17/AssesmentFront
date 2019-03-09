@@ -1,0 +1,52 @@
+<div class="container" [formGroup]="form">
+  <br>
+  <div class="row">
+    <div class="col-9">
+      <h2>Agregar nuevo cliente</h2>
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <div class="col-4">
+          <button class="btn btn-success">Guardar</button>
+        </div>
+        <div class="col-8">
+          <button class="btn btn-danger" [routerLink]="['/clients/']">Lista Clientes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group">
+    <h5>Informacion personal</h5>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Nombre</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Jose">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Direccion</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="St 1">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Seleccionar ciudad</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Medellin</option>
+      <option>Bogotá</option>
+      <option>Barranquilla</option>
+      <option>Cartagena</option>
+      <option>Pereira</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <button class="btn btn-secondary btn-lg btn-block" (click)="addCard()"></button>
+</div>
+
+<app-card-form *ngFor="let card of cardsList" (deleteCard)="deleteCard(card)" [idCard]="card">
+</app-card-form>
+
+</div>

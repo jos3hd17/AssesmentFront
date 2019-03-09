@@ -1,0 +1,29 @@
+<div class="form-group" [formGroup]="cardForm">
+  <h5>Informacion de la tarjeta</h5>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>American Express</option>
+        <option>Master Card</option>
+        <option>Visa</option>
+      </select>
+
+    </div>
+    <div class="col">
+
+      <div class="row">
+        <label for="exampleFormControlInput1">CVV</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="124">
+      </div>
+      <div class="row">
+        <label for="exampleFormControlInput1">Tipo de tarjeta</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+          <option>Debito</option>
+          <option>Credito</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-danger" (click)="closeForm()"></button>
+  </div>
+
